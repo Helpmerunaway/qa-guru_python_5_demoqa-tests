@@ -6,11 +6,14 @@ import pytest
 @pytest.fixture(scope='function', autouse=True)
 def browser_managemento():
 	print('Starting browser')
+	# включает ожидание до перекрытия загрузки элементов
+	browser.config.wait_for_no_overlap_found_by_js = True
+
 	browser.config.browser_name = 'chrome'
 	browser.config.hold_browser_open = False
 	browser.config.timeout = 3
-	browser.config.window_width = 1600
-	browser.config.window_height = 1000
+	browser.config.window_width = 1700
+	browser.config.window_height = 1200
 
 
 @pytest.fixture()
