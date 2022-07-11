@@ -2,6 +2,8 @@ from selene.support.shared import browser
 from selene import be, have
 
 
+# TODO: make this code like a test_automation-practice-form
+
 def test_web_tables(open_webtables_page):
     browser.element('#addNewRecordButton').click()
 
