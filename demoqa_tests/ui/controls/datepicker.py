@@ -1,3 +1,4 @@
+from selene import command
 from selene.support.shared import browser
 
 
@@ -11,3 +12,6 @@ class DatePicker:
 		browser.element('[class*="month-select"]').click().element(f'[value="{month - 1}"]').click()
 		browser.element('[class*="year-select"]').click().element(f'[value="{year}"]').click()
 		browser.element(f'[class*="datepicker__day--0{day}"]').click()
+
+	def enter_date(self, option: str):
+		self.element.perform(command.js.set_value(option)).press_enter()
