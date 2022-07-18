@@ -53,17 +53,16 @@ def test_register_student_dev_patel(open_auto_practice_form):
     """
     SUBJECTS HW7 POINT 1 FLUENT PAGEOBJECT
     """
-    app.registration_form \
-        .add_subject('Comp', autocomplete='Computer Science') \
-        .add_subject('Social') \
-        .add_subject('Chem', autocomplete='Chemistry') \
-        .add_subject('Maths') \
-        .add_subject('Physics')
+    # app.registration_form \
+    #     .add_subject('Comp', autocomplete='Computer Science') \
+    #     .add_subject('Social') \
+    #     .add_subject('Chem', autocomplete='Chemistry') \
+    #     .add_subject('Maths') \
+    #     .add_subject('Physics')
 
-    """
-    OR
+
     app.registration_form.add_subject(student.subjects)
-    """
+
 
     """
     HOBBIES
